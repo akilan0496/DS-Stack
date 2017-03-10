@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 public class StackImplUsingLinkedList<T> implements Stack<T> {
  
-  private total;
+  private int total;
   
   private Node first;
   
@@ -35,7 +35,7 @@ public class StackImplUsingLinkedList<T> implements Stack<T> {
       throw new NoSuchElementException();
     }
     T element = first.element;
-    firts = first.next;
+    first = first.next;
     total--;
     return element;
     
@@ -45,7 +45,7 @@ public class StackImplUsingLinkedList<T> implements Stack<T> {
   	StringBuilder sb = new StringBuilder();
     Node tmp = first;
     while (tmp != null) {
-      sb.append(tmp.ele).append(", ");
+      sb.append(tmp.element).append(", ");
       tmp = tmp.next;
     }
     return sb.toString(); 
